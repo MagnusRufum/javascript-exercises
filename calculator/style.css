@@ -3,9 +3,10 @@ body {
 }
 
 .container {
-  height: 410px;
-  width: 310px;
+  height: 416px;
+  width: 316px;
   background-color: #6cdeff;
+  border: solid silver 12px;
 }
 
 .display {
@@ -15,27 +16,28 @@ body {
   width: auto;
   background-color: #b9fff2;
   margin-bottom: 5px;
+  border: solid grey 5px;
 }
 
 .output {
   position: absolute;
   bottom: 0;
   right: 0;
-  padding-right: 5px;
-  padding-bottom:5px;
+  padding-right: 15px;
+  padding-bottom: 5px;
+  font-size: 2em;
 }
 
 .buttons {
   display: grid;
   grid-template-columns: repeat(4, 75px);
   grid-auto-rows: 75px;
-  grid-gap: 0px;
+  grid-gap: 2px;
   margin: 5px;
 }
 
 .buttons>div {
   background-color: #00a3d3;
-  border: solid black .5px;
   text-align: center;
   font-size: 4pc;
 }
