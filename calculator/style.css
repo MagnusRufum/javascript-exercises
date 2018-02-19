@@ -1,3 +1,4 @@
+
 body {
   font-family: Helvetica;
 }
@@ -19,6 +20,7 @@ body {
   background-color: #b9fff2;
   margin-bottom: 5px;
   border: solid grey 5px;
+  font-family: 'Audiowide', sans-serif;
 }
 
 .output {
@@ -41,6 +43,7 @@ body {
 .buttons>div {
   background-color: #00a3d3;
   text-align: center;
+  color: white;
   font-size: 4pc;
 }
 
