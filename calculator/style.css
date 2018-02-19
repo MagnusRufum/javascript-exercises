@@ -3,10 +3,12 @@ body {
 }
 
 .container {
-  height: 416px;
+  height: 426px;
   width: 316px;
   background-color: #6cdeff;
   border: solid silver 12px;
+  margin: auto;
+  margin-top: 15px;
 }
 
 .display {
