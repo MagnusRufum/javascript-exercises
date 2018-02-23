@@ -3,14 +3,46 @@ body {
   font-family: 'Open Sans', sans-serif;
   background-color: #282a2e;
 }
-
 .container {
+    text-align: center;
+    padding: 0;
+    margin: auto;
+}
+.calculator {
+  display: inline-block;
   height: 400px;
   width: 316px;
   background-color: #6cdeff;
   border: solid  #B2CCD6 12px;
   margin: auto;
   margin-top: 35px;
+}
+
+.clear {
+  display: inline-block;
+  margin-left: -4px;
+}
+
+button#clear-btn {
+  position: relative;
+  top: 31;
+  background-color: #00a3d3;
+  border: none;
+  text-align: center;
+  padding: 23.5px 8.821px;
+  font-size: 18pt;
+  color: white;
+  }
+
+.buttons>div>.number {
+  width: 75px;
+  height: 75px;
+  border-radius: 15px;
+  border-color:
+  background-color: #00a3d3;
+  text-align: center;
+  color: white;
+  font-size: 18pt;
 }
 
 .display {
@@ -44,10 +76,7 @@ body {
 }
 
 .buttons>div {
-  background-color: #00a3d3;
-  text-align: center;
-  color: white;
-  font-size: 3.5pc;
+
 }
 
 .divide,
