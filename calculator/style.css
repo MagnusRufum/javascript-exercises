@@ -34,11 +34,11 @@ button#clear-btn {
   color: white;
   }
 
-.buttons>div>.number {
+.buttons>.number>button{
   width: 75px;
   height: 75px;
   border-radius: 15px;
-  border-color:
+  border-color: #00a3d3;
   background-color: #00a3d3;
   text-align: center;
   color: white;
@@ -74,18 +74,22 @@ button#clear-btn {
   grid-gap: 2px;
   margin: 5px;
 }
-
-.buttons>div {
-
+.operator>button {
+  width: 75px;
+  height: 75px;
+  border-radius: 15px;
+  border-color: #00778d;
+  background-color: #00778d;
+  color: white;
+  font-size: 18pt;
 }
 
-.divide,
-.mult,
-.minus,
-.plus {
-  background-color: #00778d !important;
-}
-
-.equals {
-  background-color: #006351 !important;
+.equals>button {
+  width: 75px;
+  height: 75px;
+  border-radius: 15px;
+  color: white;
+  font-size: 18pt;
+  border-color: #006351;
+  background-color: #006351;
 }

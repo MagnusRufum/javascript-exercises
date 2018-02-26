@@ -2,6 +2,7 @@
 
   <head>
     <title>Calc Test</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="style.css">
   <link href="https://fonts.googleapis.com/css?family=Audiowide|Open Sans" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -12,53 +13,55 @@
     <div class="container">
       <div class="calculator">
         <div class="display">
-          <div class="output">15,000,000</div>
+          <div class="output"></div>
         </div>
         <div class="buttons">
-          <div class="seven">
-            <button type="button" class="number">7</button>
+          <div class="number">
+            <button type="button" id="seven">7</button>
           </div>
-          <div class="eight">
-            <button type="button" class="number">8</div>
-          <div class="nine">
-            <button type="button" class="number">9</button>
+          <div class="number">
+            <button type="button" id="eight">8</div>
+          <div class="number">
+            <button type="button" id="nine">9</button>
           </div>
-          <div class="divide">
-            <button type="button" class="operator">&divide;</button>
+          <div class="operator">
+            <button type="button" id="divide">&divide;</button>
           </div>
-          <div class="four">
-            <button type="button" class="number">4</button>
+          <div class="number">
+            <button type="button" id="four">4</button>
           </div>
-          <div class="five">
-            <button type="button" class="number">5</button>
+          <div class="number">
+            <button type="button" id="five">5</button>
           </div>
-          <div class="six">
-            <button type="button" class="number">6</button>
+          <div class="number">
+            <button type="button" id="six">6</button>
           </div>
-          <div class="mult">
-            <button type="button" class="operator">&times;</button>
+          <div class="operator">
+            <button type="button" id="multiply">&times;</button>
           </div>
-          <div class="one">
-            <button type="button" class="number">1</button>
+          <div class="number">
+            <button type="button" id="one">1</button>
           </div>
-          <div class="two">
-            <button type="button" class="number">2</button>
+          <div class="number">
+            <button type="button" id="two">2</button>
           </div>
-          <div class="three"><button type="button" class="number">3</button>
+          <div class="number">
+            <button type="button" id="three">3</button>
           </div>
-          <div class="minus"><button type="button" class="operator">&minus;</button>
+          <div class="operator">
+            <button type="button" id="minus">&minus;</button>
           </div>
-          <div class="zero">
-            <button type="button" class="number">0</button>
+          <div class="number">
+            <button type="button" id="zero">0</button>
           </div>
-          <div class="decimal">
-            <button type="button" class="number">.</button>
+          <div class="number">
+            <button type="button" id="decimal">.</button>
           </div>
           <div class="equals">
-            <button type="submit" class="operator">&equals;</button>
+            <button type="button" id="equals">&equals;</button>
           </div>
-          <div class="plus">
-            <button type="button" class="operator">&plus;</button>
+          <div class="operator">
+            <button type="button" id="plus">&plus;</button>
           </div>
         </div>
       </div>
@@ -67,7 +70,7 @@
       </div>
     </div>
 
-    <!-- <script type="text/javascript" src="calculator.js"></script> -->
+  <script src="calculator.js"></script>
   </body>
 
 </html>
