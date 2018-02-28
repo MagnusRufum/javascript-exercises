@@ -22,26 +22,32 @@ $(document).ready(function(){
 		var outputDiv = $(".output");
 		var number ="";
 		var firstNumber = "";
-		var memory = [0, ]
+		var memory = []
 		var operator
+		var result = "";
 		outputDiv.text("0");
 
 	//Create number listeners
 	$(".number > button").click(function(){
-		//handle decimals
-		if(!number.includes('.')) {
-				number += $(this).text();
-				outputDiv.text(number);
-				overflowTest(number);
-		} else if ($(this).text() != '.') {
-				number += $(this).text();
-				outputDiv.text(number);
-				overflowTest(number);
+		//clears screen if starting a new operation after using equals button
+		if(result != "") {
+			clearScreen()
 		}
+		//handle decimals
+		if(!number.includes('.') || $(this).text() != '.' ) {
+				number += $(this).text();
+				outputDiv.text(number);
+				overflowTest(number);
+		} /*else if ($(this).text() != '.') {
+				number += $(this).text();
+				outputDiv.text(number);
+				overflowTest(number);  */
+		//}
 	});
 
 	//Create Operator listeners
 	$('.operator>button').click(function() {
+		if (firstNumber != "") getResult();
 		switch ($(this).attr('id')) {
 			case 'plus':
 				operator = add;
@@ -57,26 +63,31 @@ $(document).ready(function(){
 				break;
 			default: outputDiv.text("HUH?")
 		}
-
-		memory.push(number);
+		
 		firstNumber = number;
 		number = "";
 	});
-
-	$('#equals').click(function() {
-		outputDiv.text(operate(operator, parseFloat(firstNumber), parseFloat(number)));
-		$('.buttons > .number > button').prop('disabled', true)
-		$('.buttons > .operator > button').prop('disabled', true)
-	})
+	
+	//equals and clear listeners
+	$('#equals').click(getResult);
+	$('#clear-btn').click(clearScreen);
+	
+	//Equals function
+	function getResult() {
+		result = operate(operator, parseFloat(firstNumber), parseFloat(number)).toString();
+		if (result.includes('.')) result = parseFloat(result).toFixed(4);
+		outputDiv.text(result.toString());
+	}	
+	
 	//Clear function
-	$('#clear-btn').click(function() {
-		number ="";
-		firstNumber ="";
-		memory = [0, ]
+	function clearScreen() {
+		number = "";
+		number = "";
+		firstNumber = "";
+		memory = [];
+		result = "";
 		outputDiv.text("0");
-		$('.buttons > .number > button').prop('disabled', false)
-		$('.buttons > .operator > button').prop('disabled', false)
-	});
+	}
 });
 /*module.exports = {
 	add,
